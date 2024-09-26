@@ -3,14 +3,18 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
+const testEmail = 'elqalfat@gmail.com'; // Your test email address
 
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
-  console.log(email, subject, message);
+  console.log("Received request with data:", { email, subject, message });
+  console.log("From email:", fromEmail);
+
   try {
+    console.log("Attempting to send email...");
     const data = await resend.emails.send({
       from: fromEmail,
-      to: [fromEmail, email],
+      to: [testEmail], // Always send to your test email in test mode
       subject: subject,
       react: (
         <>
@@ -18,11 +22,14 @@ export async function POST(req, res) {
           <p>Thank you for contacting us!</p>
           <p>New message submitted:</p>
           <p>{message}</p>
+          <p>From: {email}</p>
         </>
       ),
     });
+    console.log("Email sent successfully. Response data:", data);
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error });
+    console.error("Error sending email:", error);
+    return NextResponse.json({ error: error.message });
   }
 }
