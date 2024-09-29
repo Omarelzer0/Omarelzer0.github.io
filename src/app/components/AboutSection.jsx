@@ -14,7 +14,7 @@ const TAB_DATA = [
         <li>PostgreSQL</li>
         <li>Machine Learning</li>
         <li>Data Visualization</li>
-        <li>TensorFlow</li>
+        <li>Flask</li>
       </ul>
     ),
   },
