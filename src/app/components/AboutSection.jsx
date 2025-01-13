@@ -14,7 +14,7 @@ const TAB_DATA = [
         <li>PostgreSQL</li>
         <li>Machine Learning</li>
         <li>Data Visualization</li>
-        <li>Flask</li>
+        <li>web scraping</li>
       </ul>
     ),
   },
@@ -24,7 +24,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Bachelor’s Degree in Computer Science</li>
-        <li>Shorouk Academy, Cairo</li>
+        <li>Akhbar Alyom Academy, Cairo</li>
       </ul>
     ),
   },
