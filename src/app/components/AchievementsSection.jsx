@@ -1,13 +1,6 @@
 "use client";
 import React from "react";
-import dynamic from "next/dynamic";
-
-const AnimatedNumbers = dynamic(
-  () => {
-    return import("react-animated-numbers");
-  },
-  { ssr: false }
-);
+import CountUp from "react-countup";
 
 const achievementsList = [
   {
@@ -18,7 +11,7 @@ const achievementsList = [
   {
     prefix: "~",
     metric: "Users",
-    value: "100,000",
+    value: "100",
   },
   {
     metric: "Awards",
@@ -42,18 +35,10 @@ const AchievementsSection = () => {
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {achievement.prefix}
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  className="text-white text-4xl font-bold"
-                  configs={(_, index) => {
-                    return {
-                      mass: 1,
-                      friction: 100,
-                      tensions: 140 * (index + 1),
-                    };
-                  }}
+                <CountUp
+                  end={parseInt(achievement.value)}
+                  duration={2.75}
+                  separator=","
                 />
                 {achievement.postfix}
               </h2>
