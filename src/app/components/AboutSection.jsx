@@ -28,29 +28,29 @@ const TAB_DATA = [
       </ul>
     ),
   },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-2">
-        <li>
-        <Link href="https://www.coursera.org/account/accomplishments/specialization/0CV4DACPSQO5" >
-            Google Data Analytics Specialization
-        </Link>
-        </li>
-        <li>
-        <Link href="https://aitbeg.com/verify-certification?cn=BM-IS-IB-231113231895" >
-        Microsoft Power BI Course
-        </Link>
-        </li>
-        <li>
-        <Link href="https://aitbeg.com/verify-certification?cn=BM-IS-DC-240724043919" >
-        Data Analysis Course
-        </Link>
-        </li>
-      </ul>
-    ),
-  },
+  // {
+  //   title: "Certifications",
+  //   id: "certifications",
+  //   content: (
+  //     <ul className="list-disc pl-2">
+  //       <li>
+  //       <Link href="https://www.coursera.org/account/accomplishments/specialization/0CV4DACPSQO5" >
+  //           Google Data Analytics Specialization
+  //       </Link>
+  //       </li>
+  //       <li>
+  //       <Link href="https://aitbeg.com/verify-certification?cn=BM-IS-IB-231113231895" >
+  //       Microsoft Power BI Course
+  //       </Link>
+  //       </li>
+  //       <li>
+  //       <Link href="https://aitbeg.com/verify-certification?cn=BM-IS-DC-240724043919" >
+  //       Data Analysis Course
+  //       </Link>
+  //       </li>
+  //     </ul>
+  //   ),
+  // },
 ];
 
 const AboutSection = () => {
@@ -93,8 +93,8 @@ const AboutSection = () => {
               selectTab={() => handleTabChange("certifications")}
               active={tab === "certifications"}
             >
-              {" "}
-              Certifications{" "}
+              {/* {" "}
+              Certifications{" "} */}
             </TabButton>
           </div>
           <div className="mt-8">
