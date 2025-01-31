@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
-const testEmail = 'elqalfat@gmail.com'; // Your test email address
+const testEmail = 'omar.bn.hassan89@gmail.com'; // Your test email address
 
 export async function POST(req, res) {
   const { email, subject, message } = await req.json();
