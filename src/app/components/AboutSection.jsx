@@ -25,6 +25,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>Bachelor’s Degree in Computer Science</li>
         <li>Akhbar Alyom Academy, Cairo</li>
+        <li>2022  -  2026 (expected)</li>
       </ul>
     ),
   },
